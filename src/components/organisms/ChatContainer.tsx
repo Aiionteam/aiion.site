@@ -23,8 +23,9 @@ export const ChatContainer: React.FC<ChatContainerProps> = memo(({
     <div
       ref={chatContainerRef}
       className={`flex-1 overflow-y-auto ${darkMode ? 'bg-[#0a0a0a]' : 'bg-[#e8e2d5]'}`}
+      style={{ WebkitOverflowScrolling: 'touch' }}
     >
-      <div className="pl-4 pr-4 py-4 space-y-3">
+      <div className="pl-3 pr-3 md:pl-4 md:pr-4 lg:pl-4 lg:pr-4 py-3 md:py-4 lg:py-4 space-y-3">
         {interactions.map((interaction) => (
           <ChatMessage
             key={interaction.id}

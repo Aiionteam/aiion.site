@@ -24,7 +24,6 @@ export const useHomePage = () => {
   const recognitionRef = useRef<SpeechRecognition | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [interactions, setInteractions] = useState<Interaction[]>([]);
-  const [isDragging, setIsDragging] = useState(false);
   const [currentCategory, setCurrentCategory] = useState<Category>('home');
 
   // 카테고리별 뷰 상태
@@ -401,8 +400,6 @@ export const useHomePage = () => {
     isListening,
     micAvailable,
     interactions,
-    isDragging,
-    setIsDragging,
     currentCategory,
     setCurrentCategory,
     menuItems,

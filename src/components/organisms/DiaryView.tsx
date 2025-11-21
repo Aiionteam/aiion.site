@@ -678,7 +678,7 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
             </div>
 
             {/* 감정 분석 그래프 */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="flex flex-col gap-6">
               {/* 주간 그래프 */}
               <div className={`rounded-2xl border-2 p-6 shadow-lg ${
                 darkMode ? 'bg-[#121212] border-[#2a2a2a]' : 'bg-white border-[#8B7355]'

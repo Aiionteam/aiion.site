@@ -11,8 +11,6 @@ interface MainLayoutProps {
   currentCategory: Category;
   setCurrentCategory: (category: Category) => void;
   menuItems: MenuItem[];
-  isDragging: boolean;
-  setIsDragging: (dragging: boolean) => void;
 
   // Content props
   avatarMode: boolean;
@@ -39,8 +37,6 @@ export const MainLayout: React.FC<MainLayoutProps> = memo(({
   currentCategory,
   setCurrentCategory,
   menuItems,
-  isDragging,
-  setIsDragging,
   avatarMode,
   isListening,
   interactions,
@@ -62,11 +58,38 @@ export const MainLayout: React.FC<MainLayoutProps> = memo(({
         currentCategory={currentCategory}
         setCurrentCategory={setCurrentCategory}
         menuItems={menuItems}
-        isDragging={isDragging}
-        setIsDragging={setIsDragging}
       />
 
-      <div className={`flex-1 flex flex-col overflow-hidden ${darkMode ? 'bg-[#0a0a0a]' : 'bg-[#e8e2d5]'}`}>
+      <div className={`flex-1 flex flex-col overflow-hidden lg:ml-0 ${darkMode ? 'bg-[#0a0a0a]' : 'bg-[#e8e2d5]'}`}>
+        {/* 모바일/태블릿 햄버거 메뉴 버튼 */}
+        <div className={`lg:hidden border-b flex items-center ${
+          darkMode ? 'border-[#2a2a2a] bg-[#121212]' : 'border-[#d4cdc0] bg-[#f5f1e8]'
+        }`} style={{ minHeight: '56px' }}>
+          <button
+            onClick={() => setSidebarOpen(true)}
+            className={`p-3 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center active:scale-95 ${
+              darkMode ? 'hover:bg-[#1a1a1a] active:bg-[#1a1a1a] text-gray-300' : 'hover:bg-[#e8e2d5] active:bg-[#e8e2d5] text-gray-700'
+            }`}
+            aria-label="메뉴 열기"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          <div className="flex-1 flex items-center justify-center px-4">
+            <span className={`text-lg font-semibold ${
+              darkMode ? 'text-white' : 'text-gray-900'
+            }`}>Aiion</span>
+          </div>
+          <div className="w-[44px]" /> {/* 공간 균형을 위한 빈 div */}
+        </div>
+
         {avatarMode ? (
           <>
             <AvatarMode isListening={isListening} />
