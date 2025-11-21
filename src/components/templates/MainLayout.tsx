@@ -49,18 +49,34 @@ export const MainLayout: React.FC<MainLayoutProps> = memo(({
   children,
 }) => {
   return (
-    <div className={`flex h-screen overflow-hidden ${darkMode ? 'bg-[#0a0a0a]' : 'bg-[#e8e2d5]'}`}>
-      <Sidebar
-        sidebarOpen={sidebarOpen}
-        setSidebarOpen={setSidebarOpen}
-        darkMode={darkMode}
-        setDarkMode={setDarkMode}
-        currentCategory={currentCategory}
-        setCurrentCategory={setCurrentCategory}
-        menuItems={menuItems}
-      />
+    <div className={`flex h-screen overflow-hidden ${darkMode ? 'bg-[#0a0a0a]' : 'bg-[#e8e2d5]'} relative`}>
+      {/* 모바일 사이드바는 fixed로 오버레이 - 레이아웃에서 완전히 제외 */}
+      <div className="md:hidden">
+        <Sidebar
+          sidebarOpen={sidebarOpen}
+          setSidebarOpen={setSidebarOpen}
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+          currentCategory={currentCategory}
+          setCurrentCategory={setCurrentCategory}
+          menuItems={menuItems}
+        />
+      </div>
+      
+      {/* 데스크톱에서만 flex 레이아웃에 포함 */}
+      <div className="hidden md:block md:flex-shrink-0">
+        <Sidebar
+          sidebarOpen={sidebarOpen}
+          setSidebarOpen={setSidebarOpen}
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+          currentCategory={currentCategory}
+          setCurrentCategory={setCurrentCategory}
+          menuItems={menuItems}
+        />
+      </div>
 
-      <div className={`flex-1 flex flex-col overflow-hidden lg:ml-0 ${darkMode ? 'bg-[#0a0a0a]' : 'bg-[#e8e2d5]'}`}>
+      <div className={`flex-1 flex flex-col overflow-hidden md:ml-0 ${darkMode ? 'bg-[#0a0a0a]' : 'bg-[#e8e2d5]'}`} style={{ width: '100%', maxWidth: '100%', minWidth: 0 }}>
         {/* 모바일/태블릿 햄버거 메뉴 버튼 */}
         <div className={`lg:hidden border-b flex items-center ${
           darkMode ? 'border-[#2a2a2a] bg-[#121212]' : 'border-[#d4cdc0] bg-[#f5f1e8]'
@@ -119,9 +135,9 @@ export const MainLayout: React.FC<MainLayoutProps> = memo(({
             />
           </>
         ) : (
-          <>
+          <div className="flex-1 overflow-y-auto" style={{ WebkitOverflowScrolling: 'touch' }}>
             {children}
-          </>
+          </div>
         )}
       </div>
     </div>

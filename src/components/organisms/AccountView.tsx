@@ -37,7 +37,7 @@ export const AccountView: React.FC<AccountViewProps> = ({
   // Home 뷰
   if (accountView === 'home') {
     return (
-      <div className={`flex-1 overflow-y-auto p-6 ${styles.bg}`}>
+      <div className={`flex-1 overflow-y-auto p-4 md:p-6 ${styles.bg}`} style={{ WebkitOverflowScrolling: 'touch' }}>
         <div className="max-w-4xl mx-auto space-y-6">
           <div className="text-center py-4">
             <h1 className={`text-3xl font-bold ${styles.title}`}>가계부</h1>
@@ -114,7 +114,7 @@ export const AccountView: React.FC<AccountViewProps> = ({
   // Data 뷰
   if (accountView === 'data') {
     return (
-      <div className={`flex-1 flex flex-col overflow-hidden ${styles.bg}`}>
+      <div className={`flex-1 flex flex-col ${styles.bg}`}>
         <div className={`border-b shadow-sm p-4 ${styles.header}`}>
           <div className="max-w-4xl mx-auto flex items-center gap-4">
             <button
@@ -129,7 +129,7 @@ export const AccountView: React.FC<AccountViewProps> = ({
             <h1 className={`text-2xl font-bold ${styles.title}`}>데이터 관리</h1>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
           <div className="max-w-4xl mx-auto space-y-4">
             <div className={`rounded-2xl border-2 p-8 shadow-lg ${styles.card}`}>
               {transactions.length === 0 ? (
@@ -161,7 +161,7 @@ export const AccountView: React.FC<AccountViewProps> = ({
   // Daily 뷰
   if (accountView === 'daily') {
     return (
-      <div className={`flex-1 flex flex-col overflow-hidden ${styles.bg}`}>
+      <div className={`flex-1 flex flex-col ${styles.bg}`}>
         <div className={`border-b shadow-sm p-4 ${styles.header}`}>
           <div className="max-w-4xl mx-auto flex items-center gap-4">
             <button
@@ -176,7 +176,7 @@ export const AccountView: React.FC<AccountViewProps> = ({
             <h1 className={`text-2xl font-bold ${styles.title}`}>날짜별 지출</h1>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
           <div className="max-w-4xl mx-auto space-y-4">
             <div className={`rounded-2xl border-2 p-8 shadow-lg ${styles.card}`}>
               <div className="mb-4">
@@ -195,7 +195,7 @@ export const AccountView: React.FC<AccountViewProps> = ({
   // Monthly 뷰
   if (accountView === 'monthly') {
     return (
-      <div className={`flex-1 flex flex-col overflow-hidden ${styles.bg}`}>
+      <div className={`flex-1 flex flex-col ${styles.bg}`}>
         <div className={`border-b shadow-sm p-4 ${styles.header}`}>
           <div className="max-w-4xl mx-auto flex items-center gap-4">
             <button
@@ -210,7 +210,7 @@ export const AccountView: React.FC<AccountViewProps> = ({
             <h1 className={`text-2xl font-bold ${styles.title}`}>월별 지출</h1>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
           <div className="max-w-4xl mx-auto space-y-4">
             <div className={`rounded-2xl border-2 p-8 shadow-lg ${styles.card}`}>
               <div className="mb-4">
@@ -229,7 +229,7 @@ export const AccountView: React.FC<AccountViewProps> = ({
   // Income 뷰
   if (accountView === 'income') {
     return (
-      <div className={`flex-1 flex flex-col overflow-hidden ${styles.bg}`}>
+      <div className={`flex-1 flex flex-col ${styles.bg}`}>
         <div className={`border-b shadow-sm p-4 ${styles.header}`}>
           <div className="max-w-4xl mx-auto flex items-center gap-4">
             <button
@@ -244,7 +244,7 @@ export const AccountView: React.FC<AccountViewProps> = ({
             <h1 className={`text-2xl font-bold ${styles.title}`}>수익 관리</h1>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
           <div className="max-w-4xl mx-auto space-y-4">
             <div className={`rounded-2xl border-2 p-8 shadow-lg ${styles.card}`}>
               <div className="space-y-6">
@@ -273,7 +273,7 @@ export const AccountView: React.FC<AccountViewProps> = ({
   // Tax 뷰
   if (accountView === 'tax') {
     return (
-      <div className={`flex-1 flex flex-col overflow-hidden ${styles.bg}`}>
+      <div className={`flex-1 flex flex-col ${styles.bg}`}>
         <div className={`border-b shadow-sm p-4 ${styles.header}`}>
           <div className="max-w-4xl mx-auto flex items-center gap-4">
             <button
@@ -288,7 +288,7 @@ export const AccountView: React.FC<AccountViewProps> = ({
             <h1 className={`text-2xl font-bold ${styles.title}`}>세금 관리</h1>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
           <div className="max-w-4xl mx-auto space-y-4">
             <div className={`rounded-2xl border-2 p-8 shadow-lg ${styles.card}`}>
               <p className={`text-center py-8 ${styles.textMuted}`}>세금 정보가 없습니다.</p>
