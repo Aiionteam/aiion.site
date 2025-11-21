@@ -29,8 +29,8 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
   // Home 뷰
   if (diaryView === 'home') {
     return (
-      <div className={`flex-1 flex flex-col overflow-hidden ${darkMode ? 'bg-[#0a0a0a]' : ''}`}>
-        <div className="flex-1 overflow-y-auto p-6">
+      <div className={`flex-1 flex flex-col ${darkMode ? 'bg-[#0a0a0a]' : ''}`}>
+        <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
           <div className="max-w-4xl mx-auto space-y-4">
             <div className="text-center py-4">
               <h1 className={`text-3xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>일기</h1>
@@ -678,28 +678,28 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
             </div>
 
             {/* 감정 분석 그래프 */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4 md:gap-6">
               {/* 주간 그래프 */}
-              <div className={`rounded-2xl border-2 p-6 shadow-lg ${
+              <div className={`rounded-2xl border-2 p-3 md:p-6 shadow-lg overflow-x-auto ${
                 darkMode ? 'bg-[#121212] border-[#2a2a2a]' : 'bg-white border-[#8B7355]'
               }`}>
-                <h2 className={`text-xl font-bold text-center mb-6 border-b-2 pb-3 ${
+                <h2 className={`text-lg md:text-xl font-bold text-center mb-4 md:mb-6 border-b-2 pb-2 md:pb-3 ${
                   darkMode 
                     ? 'text-white border-[#2a2a2a]' 
                     : 'text-gray-900 border-[#d4c4a8]'
                 }`}>감정 분석(주간)</h2>
-                <div className="relative h-64">
-                  <svg className="w-full h-full" viewBox="0 0 400 250">
+                <div className="relative h-64 min-w-[320px]">
+                  <svg className="w-full h-full" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid meet" style={{ overflow: 'visible' }}>
                     {/* 격자선 */}
-                    <line x1="40" y1="200" x2="380" y2="200" stroke={darkMode ? "#4b5563" : "#e5e7eb"} strokeWidth="1" />
-                    <line x1="40" y1="150" x2="380" y2="150" stroke={darkMode ? "#4b5563" : "#e5e7eb"} strokeWidth="1" />
-                    <line x1="40" y1="100" x2="380" y2="100" stroke={darkMode ? "#4b5563" : "#e5e7eb"} strokeWidth="1" />
-                    <line x1="40" y1="50" x2="380" y2="50" stroke={darkMode ? "#4b5563" : "#e5e7eb"} strokeWidth="1" />
+                    <line x1="50" y1="200" x2="380" y2="200" stroke={darkMode ? "#4b5563" : "#e5e7eb"} strokeWidth="1" />
+                    <line x1="50" y1="150" x2="380" y2="150" stroke={darkMode ? "#4b5563" : "#e5e7eb"} strokeWidth="1" />
+                    <line x1="50" y1="100" x2="380" y2="100" stroke={darkMode ? "#4b5563" : "#e5e7eb"} strokeWidth="1" />
+                    <line x1="50" y1="50" x2="380" y2="50" stroke={darkMode ? "#4b5563" : "#e5e7eb"} strokeWidth="1" />
                     
                     {/* X축 */}
-                    <line x1="40" y1="125" x2="380" y2="125" stroke={darkMode ? "#9ca3af" : "#374151"} strokeWidth="2" />
+                    <line x1="50" y1="125" x2="380" y2="125" stroke={darkMode ? "#9ca3af" : "#374151"} strokeWidth="2" />
                     {/* Y축 */}
-                    <line x1="40" y1="20" x2="40" y2="200" stroke={darkMode ? "#9ca3af" : "#374151"} strokeWidth="2" />
+                    <line x1="50" y1="20" x2="50" y2="200" stroke={darkMode ? "#9ca3af" : "#374151"} strokeWidth="2" />
                     
                     {/* 데이터 선 */}
                     <polyline
@@ -707,7 +707,7 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
                       stroke={darkMode ? "#9ca3af" : "#8B7355"}
                       strokeWidth="3"
                       points={weeklyData.map((item, i) => {
-                        const x = 70 + (i * 45);
+                        const x = 80 + (i * 45);
                         const y = 125 - (item.score * 100);
                         return `${x},${y}`;
                       }).join(' ')}
@@ -715,7 +715,7 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
                     
                     {/* 데이터 포인트 */}
                     {weeklyData.map((item, i) => {
-                      const x = 70 + (i * 45);
+                      const x = 80 + (i * 45);
                       const y = 125 - (item.score * 100);
                       return (
                         <circle key={i} cx={x} cy={y} r="5" fill={darkMode ? "#9ca3af" : "#8B7355"} />
@@ -724,7 +724,7 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
                     
                     {/* X축 레이블 */}
                     {weeklyData.map((item, i) => (
-                      <text key={i} x={70 + (i * 45)} y="220" textAnchor="middle" fontSize="12" fill={darkMode ? "#d1d5db" : "#374151"}>
+                      <text key={i} x={80 + (i * 45)} y="220" textAnchor="middle" fontSize="11" fill={darkMode ? "#d1d5db" : "#374151"}>
                         {item.day}
                       </text>
                     ))}
@@ -733,26 +733,26 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
               </div>
 
               {/* 월간 그래프 */}
-              <div className={`rounded-2xl border-2 p-6 shadow-lg ${
+              <div className={`rounded-2xl border-2 p-3 md:p-6 shadow-lg overflow-x-auto ${
                 darkMode ? 'bg-[#121212] border-[#2a2a2a]' : 'bg-white border-[#8B7355]'
               }`}>
-                <h2 className={`text-xl font-bold text-center mb-6 border-b-2 pb-3 ${
+                <h2 className={`text-lg md:text-xl font-bold text-center mb-4 md:mb-6 border-b-2 pb-2 md:pb-3 ${
                   darkMode 
                     ? 'text-white border-[#2a2a2a]' 
                     : 'text-gray-900 border-[#d4c4a8]'
                 }`}>감정 분석(월간)</h2>
-                <div className="relative h-64">
-                  <svg className="w-full h-full" viewBox="0 0 400 250">
+                <div className="relative h-64 min-w-[320px]">
+                  <svg className="w-full h-full" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid meet" style={{ overflow: 'visible' }}>
                     {/* 격자선 */}
-                    <line x1="40" y1="200" x2="380" y2="200" stroke={darkMode ? "#4b5563" : "#e5e7eb"} strokeWidth="1" />
-                    <line x1="40" y1="150" x2="380" y2="150" stroke={darkMode ? "#4b5563" : "#e5e7eb"} strokeWidth="1" />
-                    <line x1="40" y1="100" x2="380" y2="100" stroke={darkMode ? "#4b5563" : "#e5e7eb"} strokeWidth="1" />
-                    <line x1="40" y1="50" x2="380" y2="50" stroke={darkMode ? "#4b5563" : "#e5e7eb"} strokeWidth="1" />
+                    <line x1="50" y1="200" x2="380" y2="200" stroke={darkMode ? "#4b5563" : "#e5e7eb"} strokeWidth="1" />
+                    <line x1="50" y1="150" x2="380" y2="150" stroke={darkMode ? "#4b5563" : "#e5e7eb"} strokeWidth="1" />
+                    <line x1="50" y1="100" x2="380" y2="100" stroke={darkMode ? "#4b5563" : "#e5e7eb"} strokeWidth="1" />
+                    <line x1="50" y1="50" x2="380" y2="50" stroke={darkMode ? "#4b5563" : "#e5e7eb"} strokeWidth="1" />
                     
                     {/* X축 */}
-                    <line x1="40" y1="125" x2="380" y2="125" stroke={darkMode ? "#9ca3af" : "#374151"} strokeWidth="2" />
+                    <line x1="50" y1="125" x2="380" y2="125" stroke={darkMode ? "#9ca3af" : "#374151"} strokeWidth="2" />
                     {/* Y축 */}
-                    <line x1="40" y1="20" x2="40" y2="200" stroke={darkMode ? "#9ca3af" : "#374151"} strokeWidth="2" />
+                    <line x1="50" y1="20" x2="50" y2="200" stroke={darkMode ? "#9ca3af" : "#374151"} strokeWidth="2" />
                     
                     {/* 데이터 선 */}
                     <polyline
@@ -760,7 +760,7 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
                       stroke={darkMode ? "#9ca3af" : "#8B7355"}
                       strokeWidth="3"
                       points={monthlyData.map((item, i) => {
-                        const x = 60 + (i * 40);
+                        const x = 70 + (i * 40);
                         const y = 125 - (item.score * 100);
                         return `${x},${y}`;
                       }).join(' ')}
@@ -768,7 +768,7 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
                     
                     {/* 데이터 포인트 */}
                     {monthlyData.map((item, i) => {
-                      const x = 60 + (i * 40);
+                      const x = 70 + (i * 40);
                       const y = 125 - (item.score * 100);
                       return (
                         <circle key={i} cx={x} cy={y} r="4" fill={darkMode ? "#9ca3af" : "#8B7355"} />
@@ -778,7 +778,7 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
                     {/* X축 레이블 (간격을 두고 표시) */}
                     {monthlyData.map((item, i) => (
                       i % 2 === 0 && (
-                        <text key={i} x={60 + (i * 40)} y="220" textAnchor="middle" fontSize="10" fill={darkMode ? "#d1d5db" : "#374151"}>
+                        <text key={i} x={70 + (i * 40)} y="220" textAnchor="middle" fontSize="9" fill={darkMode ? "#d1d5db" : "#374151"}>
                           {item.date}
                         </text>
                       )

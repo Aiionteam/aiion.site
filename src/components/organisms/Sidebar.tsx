@@ -52,7 +52,7 @@ export const Sidebar: React.FC<SidebarProps> = memo(({
             : 'w-0 md:w-16'
         } ${
           darkMode ? 'bg-[#121212] border-[#2a2a2a]' : 'bg-[#f5f1e8] border-[#d4cdc0]'
-        } border-r transition-all duration-300 flex flex-col relative fixed md:relative h-full z-50 md:z-auto overflow-hidden`}
+        } border-r transition-all duration-300 flex flex-col fixed md:relative h-full z-50 md:z-auto overflow-hidden md:flex-shrink-0`}
       >
 
       {/* Menu Header */}

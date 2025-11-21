@@ -31,8 +31,8 @@ export const CultureView: React.FC<CultureViewProps> = ({
   // Home 뷰
   if (cultureView === 'home') {
     return (
-      <div className={`flex-1 flex flex-col overflow-hidden ${styles.bg}`}>
-        <div className="flex-1 overflow-y-auto p-6">
+      <div className={`flex-1 flex flex-col ${styles.bg}`}>
+        <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="text-center py-4">
               <h1 className={`text-3xl font-bold ${styles.title}`}>문화 생활</h1>
@@ -120,7 +120,7 @@ export const CultureView: React.FC<CultureViewProps> = ({
             <h1 className={`text-2xl font-bold ${styles.title}`}>여행</h1>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
           <div className="max-w-4xl mx-auto space-y-4">
             <div className={`rounded-2xl border-2 p-8 shadow-lg ${styles.card}`}>
               <p className={`text-center py-8 ${styles.textMuted}`}>여행 기록이 없습니다.</p>
@@ -149,7 +149,7 @@ export const CultureView: React.FC<CultureViewProps> = ({
             <h1 className={`text-2xl font-bold ${styles.title}`}>영화</h1>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
           <div className="max-w-4xl mx-auto space-y-4">
             <div className={`rounded-2xl border-2 p-8 shadow-lg ${styles.card}`}>
               <p className={`text-center py-8 ${styles.textMuted}`}>영화 기록이 없습니다.</p>
@@ -178,7 +178,7 @@ export const CultureView: React.FC<CultureViewProps> = ({
             <h1 className={`text-2xl font-bold ${styles.title}`}>공연</h1>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
           <div className="max-w-4xl mx-auto space-y-4">
             <div className={`rounded-2xl border-2 p-8 shadow-lg ${styles.card}`}>
               <p className={`text-center py-8 ${styles.textMuted}`}>공연 기록이 없습니다.</p>
@@ -207,7 +207,7 @@ export const CultureView: React.FC<CultureViewProps> = ({
             <h1 className={`text-2xl font-bold ${styles.title}`}>문화 기록</h1>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
           <div className="max-w-4xl mx-auto space-y-4">
             <div className={`rounded-2xl border-2 p-8 shadow-lg ${styles.card}`}>
               <p className={`text-center py-8 ${styles.textMuted}`}>기록이 없습니다.</p>
@@ -236,7 +236,7 @@ export const CultureView: React.FC<CultureViewProps> = ({
             <h1 className={`text-2xl font-bold ${styles.title}`}>위시리스트</h1>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
           <div className="max-w-4xl mx-auto space-y-4">
             <div className={`rounded-2xl border-2 p-8 shadow-lg ${styles.card}`}>
               <div className="mb-4">

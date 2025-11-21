@@ -31,8 +31,8 @@ export const HealthView: React.FC<HealthViewProps> = ({
   // Home 뷰
   if (healthView === 'home') {
   return (
-    <div className={`flex-1 flex flex-col overflow-hidden ${styles.bg}`}>
-      <div className="flex-1 overflow-y-auto p-6">
+      <div className={`flex-1 flex flex-col ${styles.bg}`}>
+        <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
         <div className="max-w-4xl mx-auto space-y-6">
             <div className="text-center py-4">
               <h1 className={`text-3xl font-bold ${styles.title}`}>헬스케어</h1>
@@ -111,7 +111,7 @@ export const HealthView: React.FC<HealthViewProps> = ({
             <h1 className={`text-2xl font-bold ${styles.title}`}>운동</h1>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
           <div className="max-w-4xl mx-auto space-y-4">
             <div className={`rounded-2xl border-2 p-8 shadow-lg ${styles.card}`}>
               <div className="mb-4">
@@ -154,7 +154,7 @@ export const HealthView: React.FC<HealthViewProps> = ({
             <h1 className={`text-2xl font-bold ${styles.title}`}>건강 관리</h1>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
           <div className="max-w-4xl mx-auto space-y-4">
             <div className={`rounded-2xl border-2 p-8 shadow-lg ${styles.card}`}>
               <div className="space-y-4">
@@ -195,7 +195,7 @@ export const HealthView: React.FC<HealthViewProps> = ({
             <h1 className={`text-2xl font-bold ${styles.title}`}>건강 기록</h1>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
           <div className="max-w-4xl mx-auto space-y-4">
             <div className={`rounded-2xl border-2 p-8 shadow-lg ${styles.card}`}>
               <p className={`text-center py-8 ${styles.textMuted}`}>기록이 없습니다.</p>
@@ -224,7 +224,7 @@ export const HealthView: React.FC<HealthViewProps> = ({
             <h1 className={`text-2xl font-bold ${styles.title}`}>스캔</h1>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
           <div className="max-w-4xl mx-auto space-y-4">
             <div className={`rounded-2xl border-2 p-8 shadow-lg ${styles.card}`}>
               <div className="text-center py-8">
@@ -256,7 +256,7 @@ export const HealthView: React.FC<HealthViewProps> = ({
             <h1 className={`text-2xl font-bold ${styles.title}`}>운동 상세</h1>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-4 md:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
           <div className="max-w-4xl mx-auto space-y-4">
             <div className={`rounded-2xl border-2 p-8 shadow-lg ${styles.card}`}>
               <p className={`text-center py-8 ${styles.textMuted}`}>운동 상세 정보가 없습니다.</p>
