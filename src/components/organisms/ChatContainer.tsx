@@ -29,12 +29,12 @@ export const ChatContainer: React.FC<ChatContainerProps> = memo(({
         {interactions.length === 0 ? (
           <div className="flex-1 flex items-center justify-center">
             <div className="text-center px-4">
-              <div className={`text-6xl mb-4 ${darkMode ? 'text-gray-600' : 'text-gray-400'}`}>💬</div>
+              <div className={`text-6xl mb-4 ${darkMode ? 'text-gray-600' : 'text-gray-400'}`}>📔</div>
               <h2 className={`text-xl font-semibold mb-2 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                안녕하세요! 👋
+                당신의 첫 번째 일기를 작성해보세요 ✨
               </h2>
               <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                무엇이든 물어보세요. 도와드리겠습니다.
+                오늘 하루의 생각과 감정을 자유롭게 기록해보세요.
               </p>
             </div>
           </div>
