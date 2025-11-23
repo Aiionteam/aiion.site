@@ -106,7 +106,6 @@ export const HealthView: React.FC<HealthViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>운동</h1>
           </div>
@@ -149,7 +148,6 @@ export const HealthView: React.FC<HealthViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>건강 관리</h1>
           </div>
@@ -190,7 +188,6 @@ export const HealthView: React.FC<HealthViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>건강 기록</h1>
           </div>
@@ -219,7 +216,6 @@ export const HealthView: React.FC<HealthViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>스캔</h1>
           </div>
@@ -251,7 +247,6 @@ export const HealthView: React.FC<HealthViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>운동 상세</h1>
           </div>

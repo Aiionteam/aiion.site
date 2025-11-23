@@ -106,7 +106,6 @@ export const PathfinderView: React.FC<PathfinderViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>학습</h1>
           </div>
@@ -135,7 +134,6 @@ export const PathfinderView: React.FC<PathfinderViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>새 학습 시작</h1>
           </div>
@@ -186,7 +184,6 @@ export const PathfinderView: React.FC<PathfinderViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>커리어</h1>
           </div>
@@ -215,7 +212,6 @@ export const PathfinderView: React.FC<PathfinderViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>로드맵</h1>
           </div>

@@ -216,7 +216,6 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
-                <span className="font-medium">돌아가기</span>
               </button>
               <div className="flex items-center gap-2 bg-gradient-to-r from-[#8B7355] to-[#6d5943] text-white px-4 py-2 rounded-lg shadow-sm">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -400,7 +399,6 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>일기 리스트</h1>
           </div>
@@ -514,7 +512,6 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>일기 상세</h1>
           </div>
@@ -604,7 +601,6 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>감정 분석 그래프</h1>
           </div>

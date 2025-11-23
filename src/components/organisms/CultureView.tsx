@@ -115,7 +115,6 @@ export const CultureView: React.FC<CultureViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>여행</h1>
           </div>
@@ -144,7 +143,6 @@ export const CultureView: React.FC<CultureViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>영화</h1>
           </div>
@@ -173,7 +171,6 @@ export const CultureView: React.FC<CultureViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>공연</h1>
           </div>
@@ -202,7 +199,6 @@ export const CultureView: React.FC<CultureViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>문화 기록</h1>
           </div>
@@ -231,7 +227,6 @@ export const CultureView: React.FC<CultureViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>위시리스트</h1>
           </div>

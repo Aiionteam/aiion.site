@@ -124,7 +124,6 @@ export const AccountView: React.FC<AccountViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>데이터 관리</h1>
           </div>
@@ -171,7 +170,6 @@ export const AccountView: React.FC<AccountViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>날짜별 지출</h1>
           </div>
@@ -205,7 +203,6 @@ export const AccountView: React.FC<AccountViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>월별 지출</h1>
           </div>
@@ -239,7 +236,6 @@ export const AccountView: React.FC<AccountViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>수익 관리</h1>
           </div>
@@ -283,7 +279,6 @@ export const AccountView: React.FC<AccountViewProps> = ({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              <span className="font-medium">돌아가기</span>
             </button>
             <h1 className={`text-2xl font-bold ${styles.title}`}>세금 관리</h1>
           </div>
