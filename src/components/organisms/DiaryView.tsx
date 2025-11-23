@@ -193,11 +193,11 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
           : 'bg-gradient-to-br from-[#f5f1e8] to-[#e8dcc8]'
       }`}>
         {/* 상단 헤더 - 뒤로가기 + 날짜 */}
-        <div className={`border-b shadow-sm ${
+        <div className={`sticky top-0 z-10 border-b shadow-sm overflow-hidden ${
           darkMode ? 'bg-[#121212] border-[#2a2a2a]' : 'bg-white border-[#d4c4a8]'
         }`}>
-          <div className="max-w-5xl mx-auto p-4">
-            <div className="flex items-center gap-4">
+          <div className="max-w-5xl mx-auto p-2 sm:p-4">
+            <div className="flex items-center gap-2 sm:gap-4 overflow-hidden">
               <button
                 onClick={() => {
                   setNewDiaryTitle('');
@@ -207,18 +207,26 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
                   setErrorMessage('');
                   setDiaryView('home');
                 }}
-                className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
+                className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg transition-colors flex-shrink-0 ${
                   darkMode
                     ? 'text-gray-300 hover:text-white hover:bg-[#1a1a1a]'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-[#f5f1e8]'
                 }`}
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
-              <div className="flex items-center gap-2 bg-gradient-to-r from-[#8B7355] to-[#6d5943] text-white px-4 py-2 rounded-lg shadow-sm">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div 
+                className="flex items-center gap-1 sm:gap-2 bg-gradient-to-r from-[#8B7355] to-[#6d5943] text-white px-2 sm:px-4 py-1.5 sm:py-2 rounded-lg shadow-sm flex-1 min-w-0"
+                style={{ 
+                  touchAction: 'none',
+                  userSelect: 'none',
+                  WebkitUserSelect: 'none',
+                  WebkitTapHighlightColor: 'transparent'
+                }}
+              >
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
                 <input
@@ -233,11 +241,14 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
                       setSelectedDate({...selectedDate, year: new Date().getFullYear()});
                     }
                   }}
+                  onTouchStart={(e) => e.stopPropagation()}
+                  onTouchMove={(e) => e.stopPropagation()}
                   min={1000}
                   max={9999}
-                  className="w-16 bg-transparent text-center focus:outline-none text-white font-medium"
+                  className="w-12 sm:w-16 bg-transparent text-center focus:outline-none text-white font-medium text-sm sm:text-base"
+                  style={{ WebkitTapHighlightColor: 'transparent' }}
                 />
-                <span className="text-white/80">/</span>
+                <span className="text-white/80 text-xs sm:text-sm">/</span>
                 <input
                   type="number"
                   value={selectedDate.month}
@@ -250,11 +261,14 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
                       setSelectedDate({...selectedDate, month: new Date().getMonth() + 1});
                     }
                   }}
+                  onTouchStart={(e) => e.stopPropagation()}
+                  onTouchMove={(e) => e.stopPropagation()}
                   min={1}
                   max={12}
-                  className="w-10 bg-transparent text-center focus:outline-none text-white font-medium"
+                  className="w-8 sm:w-10 bg-transparent text-center focus:outline-none text-white font-medium text-sm sm:text-base"
+                  style={{ WebkitTapHighlightColor: 'transparent' }}
                 />
-                <span className="text-white/80">/</span>
+                <span className="text-white/80 text-xs sm:text-sm">/</span>
                 <input
                   type="number"
                   value={selectedDate.day}
@@ -267,14 +281,20 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
                       setSelectedDate({...selectedDate, day: new Date().getDate()});
                     }
                   }}
+                  onTouchStart={(e) => e.stopPropagation()}
+                  onTouchMove={(e) => e.stopPropagation()}
                   min={1}
                   max={31}
-                  className="w-10 bg-transparent text-center focus:outline-none text-white font-medium"
+                  className="w-8 sm:w-10 bg-transparent text-center focus:outline-none text-white font-medium text-sm sm:text-base"
+                  style={{ WebkitTapHighlightColor: 'transparent' }}
                 />
                 <select
                   value={selectedDate.dayOfWeek}
                   onChange={(e) => setSelectedDate({...selectedDate, dayOfWeek: e.target.value})}
-                  className="bg-transparent focus:outline-none text-white font-medium cursor-pointer"
+                  onTouchStart={(e) => e.stopPropagation()}
+                  onTouchMove={(e) => e.stopPropagation()}
+                  className="bg-transparent focus:outline-none text-white font-medium cursor-pointer text-xs sm:text-sm flex-shrink-0 ml-1 sm:ml-0"
+                  style={{ WebkitTapHighlightColor: 'transparent' }}
                 >
                   {['일', '월', '화', '수', '목', '금', '토'].map(day => (
                     <option key={day} value={day} className="bg-[#8B7355] text-white">{`${day}요일`}</option>
@@ -384,7 +404,7 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
       <div className={`flex-1 flex flex-col overflow-hidden ${
         darkMode ? 'bg-[#0a0a0a]' : 'bg-[#f5f1e8]'
       }`}>
-        <div className={`border-b shadow-sm p-4 ${
+        <div className={`sticky top-0 z-10 border-b shadow-sm p-4 ${
           darkMode ? 'bg-[#121212] border-[#2a2a2a]' : 'bg-white border-[#d4c4a8]'
         }`}>
           <div className="max-w-5xl mx-auto flex items-center gap-4">
@@ -494,7 +514,7 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
       <div className={`flex-1 flex flex-col overflow-hidden ${
         darkMode ? 'bg-[#0a0a0a]' : 'bg-[#f5f1e8]'
       }`}>
-        <div className={`border-b shadow-sm p-4 ${
+        <div className={`sticky top-0 z-10 border-b shadow-sm p-4 ${
           darkMode ? 'bg-[#121212] border-[#2a2a2a]' : 'bg-white border-[#d4c4a8]'
         }`}>
           <div className="max-w-4xl mx-auto flex items-center gap-4">
@@ -586,7 +606,7 @@ export const DiaryView: React.FC<DiaryViewProps> = ({
       <div className={`flex-1 flex flex-col overflow-hidden ${
         darkMode ? 'bg-[#0a0a0a]' : 'bg-[#f5f1e8]'
       }`}>
-        <div className={`border-b shadow-sm p-4 ${
+        <div className={`sticky top-0 z-10 border-b shadow-sm p-4 ${
           darkMode ? 'bg-[#121212] border-[#2a2a2a]' : 'bg-white border-[#d4c4a8]'
         }`}>
           <div className="max-w-7xl mx-auto flex items-center gap-4">

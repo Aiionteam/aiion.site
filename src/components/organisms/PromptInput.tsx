@@ -96,7 +96,7 @@ export const PromptInput: React.FC<PromptInputProps> = memo(({
               maxLength={5000}
               className={`w-full px-3 py-3 md:px-4 md:py-3 pr-12 md:pr-16 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent disabled:opacity-50 text-base md:text-sm ${
                 darkMode
-                  ? 'bg-[#1a1a1a] text-white border-[#2a2a2a] focus:ring-blue-500 placeholder-gray-400'
+                  ? 'bg-[#1a1a1a] text-white border-[#2a2a2a] focus:ring-[#8B7355] placeholder-gray-400'
                   : 'bg-white border-[#d4cdc0] focus:ring-[#8B7355]'
               }`}
             />
